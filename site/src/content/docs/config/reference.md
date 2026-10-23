@@ -69,4 +69,5 @@ Settings of the default shell.
 | `weather` | `{ "city": "Berlin" }` or `{ "latitude", "longitude", "name" }` |
 | `notifications.position` | Where popups appear: `top-right` (default), `top-left`, `bottom-right`, `bottom-left`, `top`, `bottom` |
 | `notifications.durations` | Seconds a popup stays, per urgency: `low` 3, `normal` 8, `critical` 15. Hovering pauses it |
+| `tooltips` | `true` shows the shell's own tooltips on hover; off by default (the browser's native ones never show) |
 | `notifications.enabled` | `false` turns the popups off (notifications still collect in the control center) |
