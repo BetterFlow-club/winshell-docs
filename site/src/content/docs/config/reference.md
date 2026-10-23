@@ -52,6 +52,7 @@ Settings of the default shell.
   "wallpaper": { "seed": "auto", "scheme": "tonal-spot", "dark": true },
   "palette": { "primary": "#76aed6" },
   "weather": { "city": "Berlin" },
+  "notifications": { "position": "top-right", "durations": { "low": 3, "normal": 8, "critical": 15 } },
 }
 ```
 
@@ -66,3 +67,6 @@ Settings of the default shell.
 | `wallpaper.dark` / `contrast` | `true`, `false`, `"auto"` / -1 … 1 |
 | `palette` | Override single colors: `primary`, `surface`, `onSurface`, `outline`, … |
 | `weather` | `{ "city": "Berlin" }` or `{ "latitude", "longitude", "name" }` |
+| `notifications.position` | Where popups appear: `top-right` (default), `top-left`, `bottom-right`, `bottom-left`, `top`, `bottom` |
+| `notifications.durations` | Seconds a popup stays, per urgency: `low` 3, `normal` 8, `critical` 15. Hovering pauses it |
+| `notifications.enabled` | `false` turns the popups off (notifications still collect in the control center) |
