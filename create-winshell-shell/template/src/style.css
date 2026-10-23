@@ -1,0 +1,40 @@
+/* Surfaces are transparent windows: draw only what should be visible. */
+:root {
+  --bg: rgba(24, 24, 32, 0.88);
+  --fg: #e6e6f0;
+  --muted: #9a9ab0;
+  --accent: #89b4fa;
+  font: 500 13px "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  color: var(--fg);
+}
+html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; user-select: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.bar {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0 8px;
+  padding: 0 6px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg);
+  border-radius: 0 0 12px 12px;
+}
+.title { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--muted); }
+.chip { padding: 4px 10px; border-radius: 8px; }
+.chip:hover { background: rgba(255, 255, 255, 0.08); }
+
+.panel {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 14px;
+  background: var(--bg);
+  border-radius: 14px;
+}
+.month { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.month button { width: 28px; height: 28px; border-radius: 8px; font-size: 18px; }
+.month button:hover { background: rgba(255, 255, 255, 0.08); }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.days span { padding: 6px 0; border-radius: 8px; }
+.days .today { background: var(--accent); color: #11111b; font-weight: 700; }

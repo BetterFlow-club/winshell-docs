@@ -1,0 +1,4 @@
+[
+  { "id": "__NAME__-bar", "layer": "bar", "edge": "top", "size": { "height": 36 }, "monitor": "all", "url": "app://shell/__NAME__/bar.html" },
+  { "id": "__NAME__-calendar", "popup": true, "size": { "width": 296, "height": 312 }, "url": "app://shell/__NAME__/calendar.html" }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "__NAME__",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "deploy": "npm run build && node scripts/deploy.mjs",
+    "try": "node scripts/try.mjs add",
+    "untry": "node scripts/try.mjs remove"
+  },
+  "dependencies": {
+    "@winshell/sdk": "^0.2.11"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

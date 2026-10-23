@@ -1,0 +1,43 @@
+---
+title: winshell
+description: A programmable shell for Windows. Bars, popups and desktop widgets are web pages; a small native daemon feeds them live system state.
+template: splash
+hero:
+  tagline: Replace the Windows taskbar with your own bars, popups and widgets, written as web pages.
+  actions:
+    - text: Install
+      link: start/install/
+      icon: right-arrow
+    - text: Build a shell
+      link: shells/quickstart/
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid>
+  <Card title="Use it" icon="laptop">
+    Install, and the default shell **Aurora** replaces the taskbar: a top bar, control center, launcher and power menu. [Install →](start/install/)
+  </Card>
+  <Card title="Configure it" icon="setting">
+    One JSONC file for hotkeys, surfaces, scaling and colors. Saved changes apply at once. [Config →](config/overview/)
+  </Card>
+  <Card title="Build your own" icon="pencil">
+    A surface is a web page. `@winshell/sdk` gives it windows, audio, media, Wi-Fi, stats and more. [Quickstart →](shells/quickstart/)
+  </Card>
+  <Card title="Ask an AI" icon="rocket">
+    The docs MCP server lets Claude Code and other assistants look things up here. [MCP →](ai/mcp/)
+  </Card>
+</CardGrid>
+
+## How it fits together
+
+```
+winshelld          native daemon: tracks windows, runs services (audio, wifi, media, …),
+   │                hotkeys, config; JSON over a named pipe
+   ├── winshell-host   draws the surfaces (WebView2 windows: bars, popups, widgets)
+   │      └── your pages  use @winshell/sdk
+   └── winshellctl     the command line client
+```
+
+Services only run while something subscribes to them, so an idle winshell costs next to nothing.

@@ -1,0 +1,11 @@
+{
+  "name": "winshell-docs",
+  "private": true,
+  "type": "module",
+  "workspaces": ["site", "mcp", "create-winshell-shell"],
+  "scripts": {
+    "dev": "npm run dev -w site",
+    "build": "npm run build -w site && npm run build -w mcp",
+    "check": "npm run check -w create-winshell-shell && npm run build -w mcp"
+  }
+}
