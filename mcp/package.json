@@ -1,6 +1,6 @@
 {
   "name": "@winshell/docs-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for the winshell docs: lets AI assistants search and read how to configure winshell and build shells.",
   "license": "MIT",
   "type": "module",
@@ -32,5 +32,9 @@
     "type": "git",
     "url": "https://github.com/BetterFlow-club/winshell-docs.git",
     "directory": "mcp"
+  },
+  "homepage": "https://betterflow-club.github.io/winshell-docs/",
+  "bugs": {
+    "url": "https://github.com/BetterFlow-club/winshell-docs/issues"
   }
 }

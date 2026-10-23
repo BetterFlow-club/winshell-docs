@@ -14,7 +14,7 @@ const pages: Page[] = loadPages(new URL("../pages/", import.meta.url));
 const text = (t: string) => ({ content: [{ type: "text" as const, text: t }] });
 
 const server = new McpServer(
-  { name: "winshell-docs", version: "0.1.0" },
+  { name: "winshell-docs", version: "0.1.1" },
   {
     instructions:
       "Documentation for winshell, a programmable Windows shell: installing it, winshellctl, the config file " +

@@ -1,7 +1,7 @@
 # winshell docs
 
 Documentation, MCP server and shell starter for
-[winshell](https://github.com/BetterFlow-club/winshell).
+[winshell](https://betterflow-club.github.io/winshell-docs/).
 
 | Folder | What |
 |---|---|
@@ -9,8 +9,9 @@ Documentation, MCP server and shell starter for
 | [`mcp/`](mcp) | `@winshell/docs-mcp`: an MCP server that lets an AI assistant search and read these docs |
 | [`create-winshell-shell/`](create-winshell-shell) | `npm create winshell-shell`: a new shell (Vite + TypeScript + `@winshell/sdk`) with a bar and a popup |
 
-The SDK itself (`@winshell/sdk`) lives in the winshell repo (`sdk/`), next
-to the daemon it talks to.
+The SDK itself, [`@winshell/sdk`](https://www.npmjs.com/package/@winshell/sdk),
+is published to npm with its TypeScript sources; winshell itself is closed
+source.
 
 ```bash
 npm install

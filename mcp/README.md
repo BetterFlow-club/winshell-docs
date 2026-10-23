@@ -1,7 +1,7 @@
 # @winshell/docs-mcp
 
 An [MCP](https://modelcontextprotocol.io) server with the
-[winshell](https://github.com/BetterFlow-club/winshell) docs, so AI
+[winshell](https://betterflow-club.github.io/winshell-docs/) docs, so AI
 assistants can look up how to configure winshell and build shells instead
 of guessing.
 

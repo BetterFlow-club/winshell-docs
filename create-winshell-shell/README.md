@@ -1,6 +1,6 @@
 # create-winshell-shell
 
-Start a [winshell](https://github.com/BetterFlow-club/winshell) shell:
+Start a [winshell](https://betterflow-club.github.io/winshell-docs/) shell:
 Vite + TypeScript + `@winshell/sdk`, with a top bar (focused window, clock,
 volume) and a calendar popup.
 

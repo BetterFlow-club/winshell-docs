@@ -3,7 +3,7 @@ title: Install
 description: Install, update and uninstall winshell.
 ---
 
-1. Download `winshell-setup.exe` from the [releases](https://github.com/BetterFlow-club/winshell/releases).
+1. Download `winshell-setup.exe` from the [releases](https://github.com/BetterFlow-club/winshell-docs/releases).
 2. Run it. No admin rights needed.
 
 winshell starts right away and the Windows taskbar is replaced by **Aurora**,

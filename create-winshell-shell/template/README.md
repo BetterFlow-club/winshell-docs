@@ -1,6 +1,6 @@
 # __NAME__
 
-A [winshell](https://github.com/BetterFlow-club/winshell) shell: a top bar
+A [winshell](https://betterflow-club.github.io/winshell-docs/) shell: a top bar
 (focused window, clock, volume) and a calendar popup.
 
 | Command | |

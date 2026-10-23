@@ -1,6 +1,6 @@
 {
   "name": "create-winshell-shell",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create a winshell shell: Vite + TypeScript + @winshell/sdk, with a bar and a popup.",
   "license": "MIT",
   "type": "module",
@@ -27,5 +27,9 @@
     "type": "git",
     "url": "https://github.com/BetterFlow-club/winshell-docs.git",
     "directory": "create-winshell-shell"
+  },
+  "homepage": "https://betterflow-club.github.io/winshell-docs/",
+  "bugs": {
+    "url": "https://github.com/BetterFlow-club/winshell-docs/issues"
   }
 }
