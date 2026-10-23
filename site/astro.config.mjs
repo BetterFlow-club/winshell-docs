@@ -9,6 +9,7 @@ export default defineConfig({
     starlight({
       title: "winshell",
       description: "A programmable shell for Windows: bars, popups and widgets as web pages.",
+      customCss: ["./src/styles/custom.css"],
       social: [{ icon: "github", label: "GitHub", href: "https://github.com/BetterFlow-club/winshell" }],
       editLink: { baseUrl: "https://github.com/BetterFlow-club/winshell-docs/edit/main/site/" },
       sidebar: [

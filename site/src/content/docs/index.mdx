@@ -1,43 +1,96 @@
 ---
 title: winshell
-description: A programmable shell for Windows. Bars, popups and desktop widgets are web pages; a small native daemon feeds them live system state.
+description: A programmable shell for Windows. Bars, popups and desktop widgets are web pages, drawn by the browser engine Windows already ships; a small native daemon feeds them live system state.
 template: splash
 hero:
-  tagline: Replace the Windows taskbar with your own bars, popups and widgets, written as web pages.
+  title: Your desktop, written as web pages
+  tagline: Replace the Windows taskbar with your own bars, popups and widgets. HTML and CSS for the looks, a native daemon for everything else, and the WebView2 engine that's already part of Windows to draw it.
+  image:
+    file: ../../assets/hero.svg
+    alt: A desktop with a winshell bar, a popup hanging from it and a desktop widget
   actions:
     - text: Install
       link: start/install/
       icon: right-arrow
     - text: Build a shell
       link: shells/quickstart/
+      icon: open-book
       variant: minimal
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+<div class="ws-stats">
+  <div class="ws-stat"><strong>0 MB</strong><span>of bundled browser: it uses Windows' own WebView2</span></div>
+  <div class="ws-stat"><strong>Idle = off</strong><span>services run only while a page shows their data</span></div>
+  <div class="ws-stat"><strong>Any stack</strong><span>plain HTML, React, Svelte, Vue: whatever builds to static files</span></div>
+  <div class="ws-stat"><strong>Live</strong><span>config, hotkeys and pages reload on save</span></div>
+</div>
+
+## Why winshell
 
 <CardGrid>
-  <Card title="Use it" icon="laptop">
-    Install, and the default shell **Aurora** replaces the taskbar: a top bar, control center, launcher and power menu. [Install →](start/install/)
+  <Card title="Native engine, no Electron" icon="seti:html">
+    Surfaces are drawn by **WebView2**, the Chromium engine of Microsoft Edge that ships with Windows 10 and 11. Nothing to bundle, and Windows keeps it up to date. All surfaces share one browser and one GPU process.
   </Card>
-  <Card title="Configure it" icon="setting">
-    One JSONC file for hotkeys, surfaces, scaling and colors. Saved changes apply at once. [Config →](config/overview/)
+  <Card title="Light by design" icon="rocket">
+    The daemon is native Zig. Audio, Wi-Fi, media, stats and the rest **start only when a page subscribes** and stop when it leaves, so nothing polls in the background. Window tracking is event driven.
   </Card>
-  <Card title="Build your own" icon="pencil">
-    A surface is a web page. `@winshell/sdk` gives it windows, audio, media, Wi-Fi, stats and more. [Quickstart →](shells/quickstart/)
+  <Card title="You decide the cost" icon="setting">
+    Each surface is one page, roughly **50–70 MB**. A single bar is cheap; a full desktop with launcher, control center and widgets costs more. Aurora, the default shell, idles **well under 1% CPU**, even with its live audio visualizer.
   </Card>
-  <Card title="Ask an AI" icon="rocket">
-    The docs MCP server lets Claude Code and other assistants look things up here. [MCP →](ai/mcp/)
+  <Card title="Out of the way in games" icon="star">
+    On a fullscreen app, surfaces drop behind it so Windows keeps its fast fullscreen path. They're back the moment you leave (about 4 ms).
+  </Card>
+  <Card title="The whole system, typed" icon="seti:typescript">
+    Windows, monitors, audio, media with cover art, Wi-Fi, Bluetooth, battery, brightness, notifications, tray icons, apps, wallpaper colors. One typed SDK, over 20 live topics.
+  </Card>
+  <Card title="Safe to try" icon="approve-check">
+    The Windows taskbar is only hidden while winshell runs, and it always comes back: on quit, on a crash (a watchdog restores it), or with `winshellctl restore-taskbar`.
   </Card>
 </CardGrid>
+
+## A bar in a few lines
+
+```ts
+import { shell } from "@winshell/sdk";
+
+// The focused window, live.
+shell.subscribe("windows", ({ windows, focused }) => {
+  title.textContent = windows.find((w) => w.hwnd === focused)?.title ?? "";
+});
+
+// Volume: shows the level, click to mute.
+shell.subscribe("audio", ({ output }) => {
+  volume.textContent = output ? `${Math.round(output.volume * 100)}%` : "–";
+});
+volume.onclick = () => shell.invoke("audio.toggleMute");
+
+// The clock opens a calendar popup underneath it.
+clock.onclick = () => shell.surface.toggle("calendar", { anchor: clock });
+```
+
+```bash
+npm create winshell-shell my-shell   # this, ready to run
+```
 
 ## How it fits together
 
 ```
-winshelld          native daemon: tracks windows, runs services (audio, wifi, media, …),
-   │                hotkeys, config; JSON over a named pipe
-   ├── winshell-host   draws the surfaces (WebView2 windows: bars, popups, widgets)
-   │      └── your pages  use @winshell/sdk
-   └── winshellctl     the command line client
+winshelld          native daemon: windows, hotkeys,
+  │                 config, services (audio, wifi, …)
+  ├─ winshell-host  a WebView2 window per surface
+  │    └─ pages     your HTML, with @winshell/sdk
+  └─ winshellctl    command line: start, inspect, script
 ```
 
-Services only run while something subscribes to them, so an idle winshell costs next to nothing.
+<p class="ws-note">Memory and CPU depend on the shell you run: how many surfaces it has, and how much each page does. The numbers above are Aurora's on a 16-thread desktop.</p>
+
+## Get going
+
+<CardGrid>
+  <LinkCard title="Install" description="Setup, default keys, updating and uninstalling." href="start/install/" />
+  <LinkCard title="Configure" description="Hotkeys, surfaces, scaling and colors in one file." href="config/overview/" />
+  <LinkCard title="Build a shell" description="From npm create to your own bar in five minutes." href="shells/quickstart/" />
+  <LinkCard title="Use with AI" description="The docs MCP server for Claude Code and friends." href="ai/mcp/" />
+</CardGrid>

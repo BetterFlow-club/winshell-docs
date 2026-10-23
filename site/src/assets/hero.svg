@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" fill="none" role="img" aria-label="A desktop with a winshell bar, a popup and a widget">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1f3d"/>
+      <stop offset="0.55" stop-color="#3b2650"/>
+      <stop offset="1" stop-color="#5a2f5c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5a3c7"/>
+      <stop offset="1" stop-color="#b9a6ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- screen -->
+  <rect x="8" y="8" width="544" height="344" rx="18" fill="url(#wall)"/>
+  <circle cx="440" cy="250" r="120" fill="#f5a3c7" opacity="0.10"/>
+  <circle cx="120" cy="300" r="90" fill="#b9a6ff" opacity="0.10"/>
+
+  <!-- app window -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="92" width="270" height="200" rx="10" fill="#1b1726"/>
+    <rect x="44" y="92" width="270" height="26" rx="10" fill="#241f33"/>
+    <circle cx="62" cy="105" r="4" fill="#f38ba8"/><circle cx="76" cy="105" r="4" fill="#f9e2af"/><circle cx="90" cy="105" r="4" fill="#a6e3a1"/>
+    <rect x="62" y="136" width="150" height="8" rx="4" fill="#3a3350"/>
+    <rect x="62" y="154" width="210" height="8" rx="4" fill="#2f2943"/>
+    <rect x="62" y="172" width="180" height="8" rx="4" fill="#2f2943"/>
+    <rect x="62" y="190" width="120" height="8" rx="4" fill="#2f2943"/>
+  </g>
+
+  <!-- bar -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="20" width="320" height="34" rx="12" fill="#17131f" opacity="0.92"/>
+    <rect x="132" y="29" width="16" height="16" rx="5" fill="url(#glow)"/>
+    <rect x="156" y="33" width="64" height="8" rx="4" fill="#4a4262"/>
+    <rect x="251" y="29" width="58" height="16" rx="8" fill="#2c2540"/>
+    <rect x="261" y="34" width="38" height="6" rx="3" fill="#f5a3c7"/>
+    <rect x="352" y="33" width="20" height="8" rx="4" fill="#4a4262"/>
+    <rect x="380" y="33" width="20" height="8" rx="4" fill="#4a4262"/>
+    <rect x="408" y="29" width="22" height="16" rx="6" fill="#2c2540"/>
+  </g>
+
+  <!-- popup hanging from the bar -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="64" width="188" height="150" rx="14" fill="#17131f" opacity="0.95"/>
+    <rect x="346" y="80" width="70" height="8" rx="4" fill="#cfc6e6"/>
+    <rect x="346" y="102" width="156" height="6" rx="3" fill="#2c2540"/>
+    <rect x="346" y="102" width="104" height="6" rx="3" fill="url(#glow)"/>
+    <g fill="#2c2540">
+      <rect x="346" y="124" width="74" height="36" rx="9"/><rect x="428" y="124" width="74" height="36" rx="9"/>
+      <rect x="346" y="168" width="74" height="30" rx="9"/><rect x="428" y="168" width="74" height="30" rx="9"/>
+    </g>
+    <rect x="346" y="124" width="74" height="36" rx="9" fill="#f5a3c7" opacity="0.85"/>
+    <!-- visualizer -->
+    <g fill="#b9a6ff">
+      <rect x="436" y="182" width="5" height="10" rx="2"/><rect x="444" y="176" width="5" height="16" rx="2"/>
+      <rect x="452" y="172" width="5" height="20" rx="2"/><rect x="460" y="179" width="5" height="13" rx="2"/>
+      <rect x="468" y="174" width="5" height="18" rx="2"/><rect x="476" y="181" width="5" height="11" rx="2"/>
+      <rect x="484" y="177" width="5" height="15" rx="2"/>
+    </g>
+  </g>
+
+  <!-- desktop widget -->
+  <g filter="url(#shadow)">
+    <rect x="364" y="242" width="150" height="82" rx="14" fill="#17131f" opacity="0.85"/>
+    <rect x="380" y="258" width="76" height="16" rx="5" fill="#cfc6e6"/>
+    <rect x="380" y="284" width="104" height="6" rx="3" fill="#4a4262"/>
+    <rect x="380" y="298" width="64" height="6" rx="3" fill="#4a4262"/>
+  </g>
+</svg>
