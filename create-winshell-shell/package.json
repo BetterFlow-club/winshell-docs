@@ -2,13 +2,30 @@
   "name": "create-winshell-shell",
   "version": "0.1.0",
   "description": "Create a winshell shell: Vite + TypeScript + @winshell/sdk, with a bar and a popup.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
-  "bin": { "create-winshell-shell": "index.mjs" },
-  "files": ["index.mjs", "template"],
-  "keywords": ["winshell", "create", "template", "shell"],
-  "engines": { "node": ">=20" },
+  "bin": {
+    "create-winshell-shell": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "template"
+  ],
+  "keywords": [
+    "winshell",
+    "create",
+    "template",
+    "shell"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "check": "node test/check.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BetterFlow-club/winshell-docs.git",
+    "directory": "create-winshell-shell"
   }
 }
