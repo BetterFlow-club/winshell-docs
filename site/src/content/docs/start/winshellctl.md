@@ -27,6 +27,9 @@ notepad (winshellctl config-path)
 
 Running `winshellctl` alone lists them.
 
+`start` and `restart` run winshell in the background, detached from your
+terminal: close the terminal afterwards and winshell keeps running.
+
 ## Scripting
 
 Output is JSON (except `hotkeys`, `config-path` and the start/stop

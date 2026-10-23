@@ -6,6 +6,7 @@ description: What to do when something looks wrong.
 | Problem | Fix |
 |---|---|
 | Something hangs or looks stuck | `winshellctl restart` |
+| Maximized windows sit behind the bar (seen right after a first install) | `winshellctl restart`. winshell also moves them out on its own within a few seconds |
 | Windows taskbar gone, winshell not running | `winshellctl restore-taskbar` |
 | A config change does nothing | It was probably invalid: the last good config stays active. `winshellctl config` shows it; the log has the error with line and column |
 | A hotkey doesn't work | `winshellctl hotkeys`: a binding another app owns is marked `[not active: …]` |
