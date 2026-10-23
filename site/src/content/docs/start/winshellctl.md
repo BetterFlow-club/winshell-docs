@@ -39,6 +39,7 @@ messages), one object per line:
 winshellctl cmd audio.setVolume '{"value":0.3}'
 winshellctl cmd apps.run '{"target":"default:browser"}'
 winshellctl cmd notifications.post '{"title":"Build done","body":"0 errors"}'
+winshellctl cmd hotkeys.trigger '{"id":"launcher"}'     # as if you pressed it
 winshellctl sub media | jq -c '.data.sessions[0].title'
 ```
 

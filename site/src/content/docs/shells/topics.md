@@ -25,6 +25,7 @@ types are in `@winshell/sdk`; try anything live with
 | `windows.icon` | `{ hwnd, size?: "big" \| "small" }` → `{ mime, data }` |
 | `config.reload`, `config.get` | — |
 | `hotkeys.register` / `unregister` / `list` | `{ id, keys }` / `{ id }` / — |
+| `hotkeys.trigger` | `{ id }`: run a configured hotkey as if pressed |
 | `surfaces.add` / `remove` / `list` | `{ surface, detached? }` / `{ id }` / — |
 
 ## System

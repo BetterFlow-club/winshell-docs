@@ -58,7 +58,7 @@ that opened them and close on Escape or a click outside.
 | `focusable` | `false` | Can take keyboard focus (popups always can) |
 | `hide_on_fullscreen` | `true` | Go behind fullscreen apps; `false` for an FPS overlay |
 | `scale` | `1` | Extra UI scale for this surface |
-| `popup` | `false` | Open on demand; one instance |
+| `popup` | `false` | Open on demand; one instance. With `anchor` it's pinned to those screen edges instead of its opener: `"anchor": ["top", "right", "bottom"], "size": { "width": 420 }` is a full-height side sheet |
 | `preload` | `false` | Popups: load hidden at start, so the first open is instant |
 | `passive` | `false` | Popups: never take focus or close on outside clicks (hover previews, tooltips) |
 
