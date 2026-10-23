@@ -3,8 +3,15 @@ title: Install
 description: Install, update and uninstall winshell.
 ---
 
-1. Download `winshell-setup.exe` from the [releases](https://github.com/BetterFlow-club/winshell-docs/releases).
+1. Download **[winshell-setup.exe](../../winshell-setup.exe)** (version 0.2.12, 10 MB).
 2. Run it. No admin rights needed.
+
+:::note[“Windows protected your PC”]
+The installer isn't code-signed yet, so SmartScreen may warn the first
+time. Click **More info › Run anyway**. To check the download first:
+`Get-FileHash winshell-setup.exe` should print
+`DD4F4E88C1F5F5341B1ECB6B26AC2F4CDE0B8D34E0630FBA8AD62B7946F6ED19`.
+:::
 
 winshell starts right away and the Windows taskbar is replaced by **Aurora**,
 the default shell. It also starts when you sign in.

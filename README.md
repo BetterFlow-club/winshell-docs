@@ -19,6 +19,16 @@ npm run dev      # docs site on http://localhost:4321
 npm run build    # site/dist + mcp/dist
 ```
 
+## New winshell version
+
+The download on the install page is `site/public/winshell-setup.exe`.
+
+1. In the winshell repo: `zig build installer -Doptimize=ReleaseSafe '-Dversion=X.Y.Z'`.
+2. Copy `zig-out/dist/winshell-setup.exe` to `site/public/`.
+3. In `site/src/content/docs/start/install.md`, update the version and the
+   SHA-256 (`Get-FileHash site/public/winshell-setup.exe`).
+4. Commit and push; the site redeploys.
+
 ## Writing docs
 
 - One task per page. Lead with an example, then the rules.
