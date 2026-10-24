@@ -40,6 +40,7 @@ description: Every other config section, with defaults.
 | `enabled` | `true` | Draw surfaces at all |
 | `scale` | `1` | UI scale on top of Windows' scaling: a number, or per monitor `{ "Dell AW3821DW": 1.2, "internal": 1.1, "default": 1 }`. Keys: a name, id or index (`winshellctl monitors`), `"primary"`, `"internal"` (a laptop's own screen), `"default"` |
 | `dev_url` | — | Load `app://shell/` from a dev server, with F12 dev tools ([quickstart](../../shells/quickstart/#develop-with-hot-reload)) |
+| `efficiency_mode` | `true` | `false`: keep the surfaces out of Windows' efficiency mode (applies on `winshellctl restart`) |
 
 ## aurora
 
