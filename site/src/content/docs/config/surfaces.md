@@ -53,7 +53,7 @@ that opened them and close on Escape or a click outside.
 | `position` | — | `{ x, y }` from the work area's top left |
 | `size` | 400 × 300 (bars: height 40) | `{ width, height }` |
 | `margin` | 0 | `{ top, right, bottom, left }`, px or `"10%"` |
-| `monitor` | `"primary"` | `"all"`, an index `0`, an id `"\\\\.\\DISPLAY1"` or a name (`winshellctl monitors`) |
+| `monitor` | `"primary"` | `"all"`, `"internal"` (a laptop's own screen), an index `0`, an id `"\\\\.\\DISPLAY1"` or a name (`winshellctl monitors`) |
 | `exclusive_zone` | `true` | Bars: reserve their space |
 | `focusable` | `false` | Can take keyboard focus (popups always can) |
 | `hide_on_fullscreen` | `true` | Go behind fullscreen apps; `false` for an FPS overlay |
