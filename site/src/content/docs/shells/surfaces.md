@@ -40,6 +40,9 @@ shell.surface.onClose((reason) => {});   // "request" | "outside" | "blur"
 ```
 
 - Placed next to the anchor, away from the bar's edge, kept on screen.
+- `toggle` closes an open popup, unless the `data` differs: then the page
+  gets `onOpen` again with the new data while it's showing (buttons that
+  open different tabs of one panel).
   `gap` (default 6, `0` attached, negative overlaps) sets the distance.
 - Closes on Escape, a click outside, or focus moving away.
 - Size to content: `shell.surface.autoSize(panelElement)`.

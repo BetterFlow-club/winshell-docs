@@ -45,7 +45,7 @@ catch (e) { if (e instanceof ShellError) toast(e.message); }   // e.code: "inval
 | | |
 |---|---|
 | `info` | `{ id, key, layer, edge, popup, monitor }` |
-| `open(id, opts?)`, `toggle(id, opts?)`, `close(id?)` | Popups. `opts`: `{ anchor: Element, data, gap }` |
+| `open(id, opts?)`, `toggle(id, opts?)`, `close(id?)` | Popups. `opts`: `{ anchor: Element, data, gap }`. `toggle` with other `data` than the open popup has switches it instead of closing |
 | `onOpen(fn)`, `onClose(fn)` | In a popup |
 | `resize(w, h)`, `move(x, y)`, `pin(edges, margins)`, `configure({…})` | Change own placement (logical px) |
 | `fitContent(el)`, `autoSize(el) → stop` | Size the window to an element |
